@@ -8,7 +8,7 @@ import java.util.Observer;
 import java.util.UUID;
 import java.util.concurrent.Callable;
 
-import mdcc.frontes.contextmodel.Context;
+import mdcc.frontes.contextmodel.GeneralContext;
 import mdcc.frontes.dimension.AbstractRole;
 import mdcc.frontes.dimension.DefaultRole;
 import mdcc.frontes.exception.ContextualException;
@@ -44,7 +44,7 @@ public class Task implements Callable<Message>, Observer, ITask {
 	}
 	
 	private static ContextManagerService contextServiceObservable;
-	private Context runningContext;
+	private GeneralContext runningContext;
 	protected Message messageReturnBundle;
 	
 	

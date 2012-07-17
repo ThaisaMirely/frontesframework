@@ -2,7 +2,7 @@ package mdcc.frontes.taskmodel.task;
 
 import java.util.Set;
 
-import mdcc.frontes.contextmodel.Context;
+import mdcc.frontes.contextmodel.GeneralContext;
 import mdcc.frontes.contextmodel.ContextInformation;
 import mdcc.frontes.exception.ContextualException;
 import mdcc.frontes.taskmodel.Message;
@@ -12,7 +12,7 @@ public abstract class TaskStep extends Thread {
 
 	private boolean stepAlive;
 	private String nextStepName;
-	private Context mContext;
+	private GeneralContext mContext;
 	private Message mBundle;
 
 	public TaskStep(String name) {
@@ -78,12 +78,12 @@ public abstract class TaskStep extends Thread {
 	private void evaluateContext(Object data) throws ContextualException {
 
 		//TODO - ZBAIXA Prioridade - aqui pode-se melhor o matching entre o contexto corrente e o padrão de contexto das exceções de um passo
-		Context runningContext = (Context)data;
+		GeneralContext runningContext = (GeneralContext)data;
 		
 		Set<? extends ContextualException> exceptionalContextExceptions= getExceptionalContext();
 		if(exceptionalContextExceptions!=null && !exceptionalContextExceptions.isEmpty()){
 			for (ContextualException contextualException : exceptionalContextExceptions) {
-				Context tempExceptionalcontext =  contextualException.getContext();
+				GeneralContext tempExceptionalcontext =  contextualException.getContext();
 				if(compareContext(runningContext, tempExceptionalcontext)){
 					interrupt();
 					throw contextualException;
@@ -95,8 +95,8 @@ public abstract class TaskStep extends Thread {
 
 
 
-	private boolean compareContext(Context runningContext,
-			Context exceptionalContext) {
+	private boolean compareContext(GeneralContext runningContext,
+			GeneralContext exceptionalContext) {
 		Set<ContextInformation> runningContextInfo = runningContext.getContextualInformation();
 		Set<ContextInformation> exceptionalContextInfo = exceptionalContext.getContextualInformation();
 		

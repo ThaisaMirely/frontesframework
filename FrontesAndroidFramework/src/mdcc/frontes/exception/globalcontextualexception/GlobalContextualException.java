@@ -1,6 +1,6 @@
 package mdcc.frontes.exception.globalcontextualexception;
 
-import mdcc.frontes.contextmodel.Context;
+import mdcc.frontes.contextmodel.GeneralContext;
 import mdcc.frontes.exception.ContextualException;
 
 public class GlobalContextualException extends ContextualException implements IGlobalContextualException{
@@ -8,7 +8,7 @@ public class GlobalContextualException extends ContextualException implements IG
 	private static final long serialVersionUID = -6623904965728381613L;
 	private int globalExceptionType; 
 	
-	public GlobalContextualException(Context exceptionalContext,int exceptionType) {
+	public GlobalContextualException(GeneralContext exceptionalContext,int exceptionType) {
 		super(exceptionalContext);
 		globalExceptionType = exceptionType;
 	}

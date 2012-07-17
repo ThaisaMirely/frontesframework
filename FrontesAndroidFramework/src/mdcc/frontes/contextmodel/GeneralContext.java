@@ -3,12 +3,12 @@ package mdcc.frontes.contextmodel;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Context {
+public class GeneralContext {
 
 	Set<ContextInformation> contextualInformation;
 	
 	
-	public Context() {
+	public GeneralContext() {
 		contextualInformation = new HashSet<ContextInformation>();
 	}
 	

@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.Iterator;
 import java.util.Observable;
 
-import mdcc.frontes.contextmodel.Context;
+import mdcc.frontes.contextmodel.GeneralContext;
 import mdcc.frontes.contextmodel.ContextInformation;
 import mdcc.frontes.exception.globalcontextualexception.GlobalContextualException;
 import mdcc.frontes.utils.TupleSpaceConfiguration;
@@ -74,7 +74,7 @@ public class ExceptionManagerService extends Observable implements IReaction {
 	@Override
 	public void react(Tuple tuple) {
 		
-		Context tempCtx = new Context();
+		GeneralContext tempCtx = new GeneralContext();
 		GlobalContextualException exception = null;
 		
 		Iterator<TupleField> it = tuple.iterator();

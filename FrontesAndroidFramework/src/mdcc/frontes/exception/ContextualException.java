@@ -1,6 +1,6 @@
 package mdcc.frontes.exception;
 
-import mdcc.frontes.contextmodel.Context;
+import mdcc.frontes.contextmodel.GeneralContext;
 import mdcc.frontes.dimension.AbstractRole;
 import mdcc.frontes.dimension.Where;
 import mdcc.frontes.dimension.Why;
@@ -14,14 +14,14 @@ public class ContextualException extends Exception {
 	private static final long serialVersionUID = 1L;
 	private AbstractRole executorRole;
 	private Where location;
-	private Context context;
+	private GeneralContext context;
 	
 	
-	public ContextualException(Context exceptionalContext) {
+	public ContextualException(GeneralContext exceptionalContext) {
 		this.context = exceptionalContext;
 	}
 	
-	public ContextualException(Context exceptionalContext, Why why) {
+	public ContextualException(GeneralContext exceptionalContext, Why why) {
 		super(why.getCause());
 		this.context = exceptionalContext;
 	}
@@ -42,11 +42,11 @@ public class ContextualException extends Exception {
 		this.location = location;
 	}
 
-	public Context getContext() {
+	public GeneralContext getContext() {
 		return context;
 	}
 
-	public void setContext(Context context) {
+	public void setContext(GeneralContext context) {
 		this.context = context;
 	}
 	
