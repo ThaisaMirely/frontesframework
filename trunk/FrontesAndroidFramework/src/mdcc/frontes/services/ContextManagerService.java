@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Observable;
 
-import mdcc.frontes.contextmodel.Context;
+import mdcc.frontes.contextmodel.GeneralContext;
 import mdcc.frontes.contextmodel.ContextInformation;
 import mdcc.frontes.utils.TupleSpaceConfiguration;
 import android.util.Log;
@@ -28,7 +28,7 @@ public class ContextManagerService extends Observable implements IReaction{
 	
 	// Singleton Pattern
 	private static ContextManagerService instance;
-	private Context mContext;
+	private GeneralContext mContext;
 	
 	
 	//Id para implementação da IReaction - Mandatório
@@ -58,7 +58,7 @@ public class ContextManagerService extends Observable implements IReaction{
 		}
 	}
 
-	private Context getInitialContext(Domain domain){
+	private GeneralContext getInitialContext(Domain domain){
 		List<Tuple> initialContext = null;
 		try {
 			initialContext = domain.read(contextPattern, GLOBAL_CONTEXT_RESTRICTION_STR, GLOBAL_CONTEXT_KEY_STR);
@@ -93,8 +93,8 @@ public class ContextManagerService extends Observable implements IReaction{
 		contextPattern.addField(CONTEXT_FIELD_STRING, "?");
 	}
 	
-	private Context parseContextTuplesToContext(List<Tuple> initialContext) {
-		Context tempCtx = new Context();
+	private GeneralContext parseContextTuplesToContext(List<Tuple> initialContext) {
+		GeneralContext tempCtx = new GeneralContext();
 		if(initialContext!=null && !initialContext.isEmpty()){
 			for (Tuple tuple : initialContext) {
 				Iterator<TupleField> it = tuple.iterator();
@@ -118,11 +118,11 @@ public class ContextManagerService extends Observable implements IReaction{
 		
 	}
 	
-	public Context getContext(){
+	public GeneralContext getContext(){
 		return mContext;
 	}
 	
-	public void setContext(Context ctx){
+	public void setContext(GeneralContext ctx){
 		this.mContext = ctx;
 		setChanged();
 		notifyObservers(ctx);
@@ -152,7 +152,7 @@ public class ContextManagerService extends Observable implements IReaction{
 
 	@Override
 	public void react(Tuple tuple) {
-		Context tempCtx = new Context();
+		GeneralContext tempCtx = new GeneralContext();
 		Iterator<TupleField> it = tuple.iterator();
 		while (it.hasNext()) {
 			TupleField tupleField = (TupleField) it.next();
