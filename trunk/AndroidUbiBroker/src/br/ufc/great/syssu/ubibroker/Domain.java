@@ -50,7 +50,7 @@ public class Domain implements IDomain {
 
             JSONRPC2Notification not = new JSONRPC2Notification("put", params);
 
-            String result = ubiBroker.sendMessage(not.toJSON().toJSONString(), true);
+            String result = ubiBroker.sendMessage(not.toJSON().toJSONString());
 
             if (result != null && !result.equals("")) {
                 try {
@@ -126,7 +126,7 @@ public class Domain implements IDomain {
 
             JSONRPC2Subscription not = new JSONRPC2Subscription(event, ubiBroker.getReactionsPort(), params, reaction.getId());
 
-            String result = ubiBroker.sendMessage(not.toJSON().toJSONString(), false);
+            String result = ubiBroker.sendMessage(not.toJSON().toJSONString());
 
             if (result != null && !result.equals("")) {
                 try {
@@ -154,9 +154,32 @@ public class Domain implements IDomain {
     }
     
     @Override
-	public void unsubscribe(Object reactionId, String key) throws TupleSpaceException {
-		// TODO Auto-generated method stub
-	}
+    public void unsubscribe(String event, Object reactionId, String key) throws TupleSpaceException {
+        try {
+			Map<String, Object> params = new LinkedHashMap<String, Object>();
+            params.put("domain", getName());
+            JSONRPC2Subscription not = new JSONRPC2Subscription(event, ubiBroker.getReactionsPort(), params, reactionId);
+
+            String result = ubiBroker.sendMessage(not.toJSON().toJSONString());
+
+            if (result != null && !result.equals("")) {
+                try {
+                    JSONRPC2Response response = JSONRPC2Response.parse(result);
+                    if (!response.indicatesSuccess()) {
+                        throw new TupleSpaceException(response.getError().getMessage());
+                    }                     
+                } catch (JSONRPC2ParseException ex) {
+                    throw new TupleSpaceException(ex);
+                } catch (JSONRPC2InvalidMessageException ex) {
+                    throw new TupleSpaceException(ex);
+                }
+            } else {
+            	throw new TupleSpaceException("UbiBroker not respond.");
+            }
+        } catch (IOException ex) {
+            throw new TupleSpaceException(ex);
+        }     
+    }
 
     @SuppressWarnings("unchecked")
 	private Tuple getOne(Pattern pattern, String restriction, String service, String key, long timeout) 
@@ -166,7 +189,7 @@ public class Domain implements IDomain {
 
             JSONRPC2Request not = new JSONRPC2Request(service, params, id++);
 
-            String result = ubiBroker.sendMessage(not.toJSON().toJSONString(), false);
+            String result = ubiBroker.sendMessage(not.toJSON().toJSONString());
 
             if (result != null && !result.equals("")) {
                 try {
@@ -200,7 +223,7 @@ public class Domain implements IDomain {
 
             JSONRPC2Request not = new JSONRPC2Request(service, params, id++);
 
-            String result = ubiBroker.sendMessage(not.toJSON().toJSONString(), false);
+            String result = ubiBroker.sendMessage(not.toJSON().toJSONString());
 
             if (result != null && !result.equals("")) {
                 try {
