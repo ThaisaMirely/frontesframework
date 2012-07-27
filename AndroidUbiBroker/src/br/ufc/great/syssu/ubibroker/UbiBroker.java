@@ -45,8 +45,8 @@ public class UbiBroker implements INetworkObserver, Runnable {
         return reactionsPort;
     }
 
-    String sendMessage(String message, boolean isPut) throws IOException {
-        return tcpClient.sendMessage(message, isPut);
+    String sendMessage(String message) throws IOException {
+        return tcpClient.sendMessage(message);
     }
 
     void addReaction(IReaction reaction) throws TupleSpaceException {

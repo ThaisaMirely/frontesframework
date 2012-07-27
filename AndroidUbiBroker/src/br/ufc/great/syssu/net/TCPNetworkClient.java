@@ -17,7 +17,7 @@ public class TCPNetworkClient {
         this.port = port;
     }
 
-    public String sendMessage(String message, boolean isPutMethod) throws IOException {
+    public String sendMessage(String message) throws IOException {
         String result = null;
         Socket socket = null;
         Writer writer = null;
