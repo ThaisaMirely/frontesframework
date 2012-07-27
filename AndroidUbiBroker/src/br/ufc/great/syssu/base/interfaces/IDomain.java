@@ -41,7 +41,7 @@ public interface IDomain extends IDomainComposite {
 	public Object subscribe(IReaction reaction, String event, String key) 
 		throws TupleSpaceException, TupleSpaceSecurityException;
 	
-	public void unsubscribe(Object reactionId, String key) 
+	public void unsubscribe(String event, Object reactionId, String key) 
 		throws TupleSpaceException, TupleSpaceSecurityException;
 
 }
