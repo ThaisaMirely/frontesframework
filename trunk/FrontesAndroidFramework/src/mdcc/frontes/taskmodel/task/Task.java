@@ -135,6 +135,7 @@ public class Task implements Callable<Message>, Observer, ITask {
 	
 	@Override
 	public void update(Observable observable, Object data) {
+		
 		try {
 			mControlFlow.notifyContextChanged(data);
 		} catch (ContextualException e) {
@@ -231,8 +232,18 @@ public class Task implements Callable<Message>, Observer, ITask {
 			return userDefinedContextualExceptionHandler;
 		}
 	}
-
-
+	
+	public void adaptControlFlow(LinkedHashMap<String, TaskStep> newStepsFlow){
+		mControlFlow.getRunningStep().interrupt();
+		setState(State.STOPPED);
+		mControlFlow.adaptTaskStepsWorkload(newStepsFlow);
+	}
+	
+	public void adaptControlFlow(LinkedHashMap<String, TaskStep> newStepsFlow, String firstStep){
+		mControlFlow.getRunningStep().interrupt();
+		setState(State.STOPPED);
+		mControlFlow.adaptTaskStepsWorkload(newStepsFlow, firstStep);
+	}
 
 	/**
 	 * @author Carlos
@@ -254,6 +265,26 @@ public class Task implements Callable<Message>, Observer, ITask {
 			setState(State.READY);
 		}
 		
+		public void adaptTaskStepsWorkload(
+				LinkedHashMap<String, TaskStep> newStepsFlow) {
+			
+			mTaskStepsWorkLoad = null;
+			this.mTaskStepsWorkLoad = newStepsFlow;
+			execute();	
+			
+		}
+		
+		public void adaptTaskStepsWorkload(
+				LinkedHashMap<String, TaskStep> newStepsFlow, String firstStep) {
+			
+			mTaskStepsWorkLoad = null;
+			this.mTaskStepsWorkLoad = newStepsFlow;
+			execute(firstStep);	
+			
+		}
+		
+		
+
 		public void notifyContextChanged(Object data) throws ContextualException {
 			getRunningStep().notifyContextChanged(data);
 		}
@@ -283,17 +314,21 @@ public class Task implements Callable<Message>, Observer, ITask {
 					try {
 						mRunningTaskStep.join();
 					} catch (InterruptedException e) {
-						e.printStackTrace();
+						setState(State.STOPPED);
 						mRunningTaskStep.interrupt();
 					}
 				}
+				if(!it.hasNext()){
+					//Encerra a tarefa caso todos os passos já tenham sido executados 
+					System.out.println("Tarefa " + getTaskName() + "Finalizada" );
+					setState(State.STOPPED);
+				}
 
-			}
-			/*if(BuildConfig.DEBUG){*/
+			}else {
+				//Já que a tarefa não tem nenhum passo então deve ser terminada
 				System.out.println("Tarefa " + getTaskName() + "Finalizada" );
-			/*}*/
-			
-			setState(State.STOPPED);
+				setState(State.STOPPED);
+			}
 
 		}
 
@@ -322,7 +357,7 @@ public class Task implements Callable<Message>, Observer, ITask {
 					try {
 						mRunningTaskStep.join();
 					} catch (InterruptedException e) {
-						e.printStackTrace();
+						setState(State.STOPPED);
 						mRunningTaskStep.interrupt();
 					}
 
@@ -332,12 +367,11 @@ public class Task implements Callable<Message>, Observer, ITask {
 						nextTaskStep = null;
 					}
 
-				} while (lastTaskStep!=mRunningTaskStep);
+				} while (lastTaskStep!=mRunningTaskStep && getState() != State.STOPPED);
 				// TODO - Colocar condição para os outros estados (handling, adapting, etc) - 05/07/2012
 			}
-			/*if(BuildConfig.DEBUG){*/
-				System.out.println("Tarefa " + getTaskName() + "Finalizada" );
-			/*}*/
+			
+			System.out.println("Tarefa " + getTaskName() + "Finalizada" );
 			setState(State.STOPPED);
 		}
 
