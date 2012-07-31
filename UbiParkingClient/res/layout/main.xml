@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:padding="5dip">
+
+    <TextView
+        android:id="@+id/textLog"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Log:" 
+        android:layout_alignParentTop="true"/>
+
+	<Button
+        android:id="@+id/ButtonFinishParking"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirmar Estacionamento" 
+        android:layout_alignParentBottom="true"/>
+    
+	<Button
+        android:id="@+id/ButtonConfirmVaga"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirmar Vaga" 
+        android:layout_above="@id/ButtonFinishParking"/>
+
+    
+    <Button
+        android:id="@+id/buttonRequestVaga"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Requisitar Vaga" 
+        android:layout_above="@id/ButtonConfirmVaga"/>
+
+        
+    <EditText
+        android:id="@+id/editTextLog"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/buttonRequestVaga"
+        android:layout_below="@id/textLog" />
+    
+    
+    
+</RelativeLayout>
