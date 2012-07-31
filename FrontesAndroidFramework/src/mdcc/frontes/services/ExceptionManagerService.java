@@ -130,6 +130,6 @@ public class ExceptionManagerService extends Observable implements IReaction {
 	@Override
 	protected void finalize() throws Throwable {
 		super.finalize();
-		domain.unsubscribe(getId(), GLOBAL_EXCEPTION_KEY_STR);
+		domain.unsubscribe("put", getId(), GLOBAL_EXCEPTION_KEY_STR);
 	}
 }

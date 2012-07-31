@@ -165,7 +165,7 @@ public class ContextManagerService extends Observable implements IReaction{
 	@Override
 	protected void finalize() throws Throwable {
 		super.finalize();
-		domain.unsubscribe(getId(), GLOBAL_CONTEXT_KEY_STR);
+		domain.unsubscribe("put", getId(), GLOBAL_CONTEXT_KEY_STR);
 	}
 	
 	

@@ -48,11 +48,15 @@ public abstract class TaskStep extends Thread {
 		mBundle.put(key, value);
 	}
 
+	public Message getBundle(){
+		return this.mBundle;
+	}
+	
 	protected void setBundleMessage(Message bundle) {
 		this.mBundle = bundle;
 	}
 	
-	public void stopStep() {
+		public void stopStep() {
 		this.stepAlive = false;
 	}
 
