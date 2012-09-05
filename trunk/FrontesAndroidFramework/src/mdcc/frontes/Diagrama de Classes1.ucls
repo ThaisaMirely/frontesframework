@@ -1,0 +1,530 @@
+<class-diagram version="1.0.9" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="true" nesting-relationships="true">  
+  <class id="1" corner="BOTTOM_RIGHT" language="java" name="mdcc.frontes.contextmodel.ContextInformation" 
+    project="FrontesAndroidFramework" 
+    file="/FrontesAndroidFramework/src/mdcc/frontes/contextmodel/ContextInformation.java" binary="false">    
+    <position x="920" y="651" width="-1" height="-1"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="2" corner="BOTTOM_RIGHT" language="java" name="mdcc.frontes.contextmodel.GeneralContext" 
+    project="FrontesAndroidFramework" file="/FrontesAndroidFramework/src/mdcc/frontes/contextmodel/GeneralContext.java" 
+    binary="false">    
+    <position x="876" y="420" width="-1" height="-1"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="3" corner="BOTTOM_RIGHT" language="java" name="mdcc.frontes.dimension.AbstractRole" 
+    project="FrontesAndroidFramework" file="/FrontesAndroidFramework/src/mdcc/frontes/dimension/AbstractRole.java" 
+    binary="false">    
+    <position x="75" y="330" width="-1" height="-1"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <interface id="4" corner="BOTTOM_RIGHT" language="java" 
+    name="mdcc.frontes.exception.handlerinterfaces.IPersonalizedContextualExceptionHandler" 
+    project="FrontesAndroidFramework" 
+    file="/FrontesAndroidFramework/src/mdcc/frontes/exception/handlerinterfaces/IPersonalizedContextualExceptionHandler.java" 
+    binary="false">    
+    <position x="-42" y="199" width="-1" height="-1"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </interface>  
+  <class id="5" corner="BOTTOM_RIGHT" language="java" name="mdcc.frontes.exception.ContextualException" 
+    project="FrontesAndroidFramework" 
+    file="/FrontesAndroidFramework/src/mdcc/frontes/exception/ContextualException.java" binary="false">    
+    <position x="-30" y="473" width="-1" height="-1"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <interface id="6" corner="BOTTOM_RIGHT" language="java" 
+    name="mdcc.frontes.exception.handlerinterfaces.IContextualExceptionHandlerService" project="FrontesAndroidFramework" 
+    file="/FrontesAndroidFramework/src/mdcc/frontes/exception/handlerinterfaces/IContextualExceptionHandlerService.java" 
+    binary="false">    
+    <position x="-1" y="637" width="-1" height="-1"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </interface>  
+  <class id="7" corner="BOTTOM_RIGHT" language="java" 
+    name="mdcc.frontes.exception.globalcontextualexception.GlobalContextualException" project="FrontesAndroidFramework" 
+    file="/FrontesAndroidFramework/src/mdcc/frontes/exception/globalcontextualexception/GlobalContextualException.java" 
+    binary="false">    
+    <position x="760" y="153" width="-1" height="-1"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="8" corner="BOTTOM_RIGHT" language="java" 
+    name="mdcc.frontes.exception.DefaultContextualExceptionHandlerService" project="FrontesAndroidFramework" 
+    file="/FrontesAndroidFramework/src/mdcc/frontes/exception/DefaultContextualExceptionHandlerService.java" 
+    binary="false">    
+    <position x="1180" y="554" width="-1" height="-1"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <interface id="9" corner="BOTTOM_RIGHT" language="java" 
+    name="mdcc.frontes.exception.globalcontextualexception.IGlobalContextualException" project="FrontesAndroidFramework" 
+    file="/FrontesAndroidFramework/src/mdcc/frontes/exception/globalcontextualexception/IGlobalContextualException.java" 
+    binary="false">    
+    <position x="1070" y="149" width="-1" height="-1"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </interface>  
+  <class id="10" corner="BOTTOM_RIGHT" language="java" name="mdcc.frontes.services.ContextManagerService" 
+    project="FrontesAndroidFramework" 
+    file="/FrontesAndroidFramework/src/mdcc/frontes/services/ContextManagerService.java" binary="false">    
+    <position x="1132" y="277" width="-1" height="-1"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="11" corner="BOTTOM_RIGHT" language="java" name="mdcc.frontes.services.ExceptionManagerService" 
+    project="FrontesAndroidFramework" 
+    file="/FrontesAndroidFramework/src/mdcc/frontes/services/ExceptionManagerService.java" binary="false">    
+    <position x="723" y="739" width="-1" height="-1"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="12" corner="BOTTOM_RIGHT" language="java" name="mdcc.frontes.taskmanager.TaskExecutor" 
+    project="FrontesAndroidFramework" file="/FrontesAndroidFramework/src/mdcc/frontes/taskmanager/TaskExecutor.java" 
+    binary="false">    
+    <position x="141" y="738" width="-1" height="-1"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="13" corner="BOTTOM_RIGHT" language="java" 
+    name="mdcc.frontes.taskmanager.TaskExecutor.GlobalExceptionHandlerDispatcher" project="FrontesAndroidFramework" 
+    file="/FrontesAndroidFramework/src/mdcc/frontes/taskmanager/TaskExecutor.java" binary="false">    
+    <position x="427" y="805" width="-1" height="-1"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <enumeration id="14" corner="BOTTOM_RIGHT" language="java" name="mdcc.frontes.taskmodel.State" 
+    project="FrontesAndroidFramework" file="/FrontesAndroidFramework/src/mdcc/frontes/taskmodel/State.java" 
+    binary="false">    
+    <position x="226" y="120" width="-1" height="-1"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </enumeration>  
+  <interface id="15" corner="BOTTOM_RIGHT" language="java" name="mdcc.frontes.taskmodel.task.ITask" 
+    project="FrontesAndroidFramework" file="/FrontesAndroidFramework/src/mdcc/frontes/taskmodel/task/ITask.java" 
+    binary="false">    
+    <position x="377" y="122" width="-1" height="-1"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </interface>  
+  <class id="16" corner="BOTTOM_RIGHT" language="java" name="mdcc.frontes.taskmodel.task.TaskStep" 
+    project="FrontesAndroidFramework" file="/FrontesAndroidFramework/src/mdcc/frontes/taskmodel/task/TaskStep.java" 
+    binary="false">    
+    <position x="552" y="540" width="-1" height="-1"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="17" corner="BOTTOM_RIGHT" language="java" name="mdcc.frontes.taskmodel.task.Task.TaskControlFlow" 
+    project="FrontesAndroidFramework" file="/FrontesAndroidFramework/src/mdcc/frontes/taskmodel/task/Task.java" 
+    binary="false">    
+    <position x="587" y="340" width="-1" height="-1"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="18" corner="BOTTOM_RIGHT" language="java" name="mdcc.frontes.taskmodel.Message" 
+    project="FrontesAndroidFramework" file="/FrontesAndroidFramework/src/mdcc/frontes/taskmodel/Message.java" 
+    binary="false">    
+    <position x="350" y="629" width="-1" height="-1"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="19" corner="BOTTOM_RIGHT" language="java" name="mdcc.frontes.taskmodel.task.Task" 
+    project="FrontesAndroidFramework" file="/FrontesAndroidFramework/src/mdcc/frontes/taskmodel/task/Task.java" 
+    binary="false">    
+    <position x="343" y="235" width="-1" height="-1"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="20" corner="BOTTOM_RIGHT" language="java" name="br.ufc.great.syssu.ubibroker.UbiBroker" 
+    project="syssu.ubibroker" file="/syssu.ubibroker/src/br/ufc/great/syssu/ubibroker/UbiBroker.java" binary="false">    
+    <position x="1042" y="718" width="-1" height="-1"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <association id="21">    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="22" name="messageReturnBundle"/>      
+      <multiplicity id="23" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="24">    
+    <bendpoint x="760" y="68"/>    
+    <bendpoint x="-190" y="70"/>    
+    <bendpoint x="-192" y="476"/>    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="5"/>  
+  </generalization>  
+  <dependency id="25">    
+    <bendpoint x="236" y="848"/>    
+    <bendpoint x="1186" y="850"/>    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="8"/>  
+  </dependency>  
+  <association id="26">    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="27" name="mTaskState"/>      
+      <multiplicity id="28" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="29">    
+    <bendpoint x="126" y="524"/>    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="5"/>  
+  </dependency>  
+  <association id="30">    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="31" name="userDefinedContextualExceptionHandler"/>      
+      <multiplicity id="32" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="33">    
+    <bendpoint x="674" y="300"/>    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="34" name="runningContext"/>      
+      <multiplicity id="35" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="36">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="2"/>  
+  </dependency>  
+  <association id="37">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="38" name="executorRole"/>      
+      <multiplicity id="39" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="40">    
+    <bendpoint x="721" y="789"/>    
+    <bendpoint x="888" y="792"/>    
+    <bendpoint x="889" y="742"/>    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="41" name="instance"/>      
+      <multiplicity id="42" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="43">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="16"/>  
+  </dependency>  
+  <realization id="44">    
+    <bendpoint x="1232" y="612"/>    
+    <bendpoint x="1234" y="886"/>    
+    <bendpoint x="-84" y="884"/>    
+    <bendpoint x="-86" y="742"/>    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="6"/>  
+  </realization>  
+  <dependency id="45">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="1"/>  
+  </dependency>  
+  <association id="46">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="47" name="mContext"/>      
+      <multiplicity id="48" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="49">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="5"/>  
+  </dependency>  
+  <dependency id="50">    
+    <bendpoint x="1400" y="274"/>    
+    <bendpoint x="1398" y="718"/>    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="20"/>  
+  </dependency>  
+  <dependency id="51">    
+    <bendpoint x="1318" y="606"/>    
+    <bendpoint x="1310" y="950"/>    
+    <bendpoint x="-184" y="952"/>    
+    <bendpoint x="-186" y="514"/>    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="5"/>  
+  </dependency>  
+  <realization id="52">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="9"/>  
+  </realization>  
+  <dependency id="53">    
+    <bendpoint x="1374" y="810"/>    
+    <bendpoint x="1376" y="230"/>    
+    <bendpoint x="986" y="226"/>    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <dependency id="54">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="5"/>  
+  </dependency>  
+  <dependency id="55">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <association id="56">    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="57" name="mControlFlow"/>      
+      <multiplicity id="58" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="17" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="59">    
+    <bendpoint x="1348" y="558"/>    
+    <bendpoint x="1346" y="200"/>    
+    <bendpoint x="1018" y="200"/>    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <association id="60">    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="61" name="contextServiceObservable">        
+        <position x="909" y="252" width="133" height="14"/>      
+      </attribute>      
+      <multiplicity id="62" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="63">    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="64" name="mContext"/>      
+      <multiplicity id="65" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="66">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="15"/>  
+  </realization>  
+  <dependency id="67">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <association id="68">    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="69" name="defaultContectualExceptionHandlerService">        
+        <position x="-170" y="571" width="209" height="14"/>      
+      </attribute>      
+      <multiplicity id="70" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <nesting id="71">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="13"/>  
+  </nesting>  
+  <dependency id="72">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <dependency id="73">    
+    <bendpoint x="1274" y="610"/>    
+    <bendpoint x="1270" y="918"/>    
+    <bendpoint x="-144" y="914"/>    
+    <bendpoint x="-150" y="282"/>    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="19"/>  
+  </dependency>  
+  <association id="74">    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="75" name="mRole"/>      
+      <multiplicity id="76" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="77">    
+    <bendpoint x="690" y="786"/>    
+    <bendpoint x="688" y="828"/>    
+    <bendpoint x="1038" y="832"/>    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="20"/>  
+  </dependency>  
+  <association id="78">    
+    <bendpoint x="140" y="791"/>    
+    <bendpoint x="-10" y="792"/>    
+    <bendpoint x="-11" y="739"/>    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="79" name="instance"/>      
+      <multiplicity id="80" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="81">    
+    <bendpoint x="92" y="464"/>    
+    <bendpoint x="514" y="444"/>    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="82" name="context"/>      
+      <multiplicity id="83" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="84">    
+    <bendpoint x="1128" y="338"/>    
+    <bendpoint x="1270" y="336"/>    
+    <bendpoint x="1270" y="294"/>    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="85" name="instance">        
+        <position x="1236" y="299" width="45" height="14"/>      
+      </attribute>      
+      <multiplicity id="86" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="87">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="88" name="mBundle"/>      
+      <multiplicity id="89" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="90">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="5"/>  
+  </dependency>  
+  <dependency id="91">    
+    <bendpoint x="556" y="650"/>    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="1"/>  
+  </dependency>  
+  <dependency id="92">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="1"/>  
+  </dependency>  
+  <association id="93">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="94" name="mTaskPool"/>      
+      <multiplicity id="95" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="96">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="16"/>  
+  </dependency>  
+  <association id="97">    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="98" name="mRunningTaskStep"/>      
+      <multiplicity id="99" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="100">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="2"/>  
+  </dependency>  
+  <dependency id="101">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="18"/>  
+  </dependency>  
+  <association id="102">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="103" name="contextualInformation"/>      
+      <multiplicity id="104" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="105">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="106" name="mExceptionManagerService"/>      
+      <multiplicity id="107" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="108">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="109" name="mDefaultContextualExceptionHandler"/>      
+      <multiplicity id="110" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <nesting id="111">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="17"/>  
+  </nesting>  
+  <association id="112">    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="113" name="mTaskStepsWorkLoad"/>      
+      <multiplicity id="114" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="false" 
+    visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true"/>    
+    <operations public="true" package="true" protected="true" private="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

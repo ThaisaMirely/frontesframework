@@ -29,7 +29,7 @@ public class ExceptionManagerService extends Observable implements IReaction {
 	private static ExceptionManagerService instance;
 
 	//IReaction implementation
-	private static int num = 1;
+	//private static int num = 1;
 	protected Object id ;
 	private static Pattern globalExceptionPattern;
 	private Domain domain;
@@ -37,7 +37,7 @@ public class ExceptionManagerService extends Observable implements IReaction {
 	
 	
 	private ExceptionManagerService() {
-		setId(num++);
+		//setId(num++);
 		createGlobalExceptionTuplePattern();
 		this.domain = obtainTupleSpaceAccess();
 		subscribeToTupleSpace(domain);

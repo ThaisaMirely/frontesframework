@@ -8,7 +8,8 @@ public class TupleSpaceConfiguration {
 
 	//private static final String ipUbicentre = "10.0.2.2";
 	//private static final String ipUbicentre = "192.168.0.121";
-	private static final String ipUbicentre = "192.168.0.130";
+	//private static final String ipUbicentre = "192.168.0.120";
+	private static final String ipUbicentre = "192.168.5.151";
 	private static final int portUbicentre = 9090;
 	private static int reactionPort = 9098;
 	
