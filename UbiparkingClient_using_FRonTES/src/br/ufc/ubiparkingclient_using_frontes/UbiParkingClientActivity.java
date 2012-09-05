@@ -1,11 +1,15 @@
 package br.ufc.ubiparkingclient_using_frontes;
 
 import java.io.IOException;
+import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.Set;
 import java.util.UUID;
 
+import mdcc.frontes.contextmodel.ContextInformation;
+import mdcc.frontes.contextmodel.GeneralContext;
 import mdcc.frontes.exception.ContextualException;
+import mdcc.frontes.exception.handlerinterfaces.IPersonalizedContextualExceptionHandler;
 import mdcc.frontes.taskmanager.TaskExecutor;
 import mdcc.frontes.taskmodel.task.Task;
 import mdcc.frontes.taskmodel.task.TaskStep;
@@ -34,7 +38,8 @@ public class UbiParkingClientActivity extends Activity {
 	// Variaveis relacionadas ao uso do espaco de tuplas
 	private static UbiBroker broker;
 	private static IDomain domain;
-	private static String ipUbicentre = "192.168.0.120";
+	//private static String ipUbicentre = "192.168.0.120";
+	private static String ipUbicentre = "192.168.5.151";
 	private static int portUbicentre = 9090;
 	private static int reactionPort = 9094;
 	private static final String CONTEXT_DOMAIN_NAME = "#DomainName#";
@@ -139,13 +144,16 @@ public class UbiParkingClientActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				updateEditText("Testando acesso ao SysSU - Domain name: " + domain.getName());
+				if(domain!=null){
+					updateEditText("Acessando ao SysSU - Domain name: " + domain.getName());
+				}
 				updateEditText("Tarefa Estacionar - Iniciada...");
 				
 				//Inicia a tarefa criada
 				setupTaskSteps();
 				final TaskExecutor te = TaskExecutor.getInstance();
 				final UUID id = te.submitTask(estacionarTask);
+				//Message result = te.getTask(id).get();
 				
 			}
 		});
@@ -167,6 +175,7 @@ public class UbiParkingClientActivity extends Activity {
 			@Override
 			protected void doWhileExecutingstep() throws InterruptedException {
 				try {
+					Thread.sleep(60000);
 					String vaga = postRequestVagaTuple((String)getBundle().get("taskid"));
 					getBundle().put("vaga", vaga);
 					updateEditText("Recomendação de vaga recebida: Vaga " + vaga);
@@ -199,12 +208,23 @@ public class UbiParkingClientActivity extends Activity {
 			
 			@Override
 			protected Set<? extends ContextualException> getExceptionalContext() {
+				
+				// TODO - Adicionar uma exceção contextual e testar - 21/08/2012
+				/*	GeneralContext exceptionalContext = new GeneralContext();
+				exceptionalContext.addContextInformation(new ContextInformation("vaga_"+(String)getBundle().get("vaga"), "bloqueada"));
+				
+				ContextualException c = new ContextualException(exceptionalContext);
+				HashSet<ContextualException> setExceptionsThatCanBeRaised = new HashSet<ContextualException>();
+				setExceptionsThatCanBeRaised.add(c);
+				return setExceptionsThatCanBeRaised;*/
 				return null;
 			}
 			
 			@Override
 			protected void doWhileExecutingstep() throws InterruptedException {
 				try {
+					updateEditText("Passo de finalização em progresso...");
+					//Thread.sleep(60000);
 					postParkingFinish((String)getBundle().get("taskid"));
 					updateEditText("Estacionamento Finalizado com sucesso.");
 				} catch (Exception e) {
@@ -221,6 +241,16 @@ public class UbiParkingClientActivity extends Activity {
 
 		//Instancia a tarefa com a carga de trabalho criada.
 		estacionarTask = new Task(workload);
+		
+		estacionarTask.setUserDefinedContextualExceptionHandler(new IPersonalizedContextualExceptionHandler() {
+			
+			@Override
+			public void handleContextualException(Task task,
+					ContextualException exception) {
+				Toast.makeText(getApplicationContext(), "Exceção detectada", Toast.LENGTH_LONG).show();
+				
+			}
+		});
 		
 	}
 	
