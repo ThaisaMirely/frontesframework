@@ -32,7 +32,7 @@ public class ContextManagerService extends Observable implements IReaction{
 	
 	
 	//Id para implementação da IReaction - Mandatório
-	private static int num = 1;
+	//private static int num = 1;
 	protected Object id ;
 	
 	private Domain domain;
@@ -42,7 +42,7 @@ public class ContextManagerService extends Observable implements IReaction{
 	private static Pattern contextPattern;
 		
 	private ContextManagerService() {
-		setId(num++);
+		//setId(num++);
 		createContextTuplePattern();
 		this.domain = obtainTupleSpaceAccess();
 		mContext = getInitialContext(domain);

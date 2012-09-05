@@ -37,6 +37,8 @@ public class Task implements Callable<Message>, Observer, ITask {
 	private TaskExecutionStrategy selectedExecutionStrategy;
 	private String firstStepName;
 	private IContextualExceptionHandlerService defaultContectualExceptionHandlerService;
+	
+	// TODO - Transformar esse ContextualExeptionHandler em uma lista de hanlers - 01/08/2012
 	private IPersonalizedContextualExceptionHandler userDefinedContextualExceptionHandler;
 	
 	private static enum TaskExecutionStrategy{
@@ -59,6 +61,7 @@ public class Task implements Callable<Message>, Observer, ITask {
 		this.mControlFlow = new TaskControlFlow();
 		this.selectedExecutionStrategy = TaskExecutionStrategy.ADDITIONORDER;
 		this.messageReturnBundle = new Message();
+		messageReturnBundle.put("taskid", mTaskId.toString());
 		subscribeToReceiveContextUpdates();
 		
 	}
