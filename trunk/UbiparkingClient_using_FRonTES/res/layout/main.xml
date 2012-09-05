@@ -48,17 +48,14 @@
         android:layout_above="@id/ButtonConfirmVaga"
         android:visibility="gone"
         />
-
+
     <EditText
         android:id="@+id/editTextLog"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:minLines="2"
         android:layout_above="@id/buttonRequestVaga"
-        android:layout_below="@id/textLog" />
-    
-    
-    
-    
+        android:layout_below="@id/textLog"
+        android:minLines="2"
+        android:textSize="@dimen/smalltext" />
     
 </RelativeLayout>
