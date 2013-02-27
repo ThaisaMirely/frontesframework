@@ -34,7 +34,8 @@ public class UbiParkingClientActivity extends Activity {
 	// Variaveis relacionadas ao uso do espaco de tuplas
 	private static UbiBroker broker;
 	private static IDomain domain;
-	private static String ipUbicentre = "192.168.5.151";
+	//private static String ipUbicentre = "192.168.5.151";
+	private static String ipUbicentre = "192.168.0.120";
 	private static int portUbicentre = 9090;
 	private static int reactionPort = 9094;
 	private static final String CONTEXT_DOMAIN_NAME = "#DomainName#";
