@@ -1,0 +1,1 @@
+Projeto Acadêmico sobre tratamento de exceções para sistemas ubíquos.
